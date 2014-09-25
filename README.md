@@ -5,12 +5,12 @@ First, make sure you have the latest version of [Vagrant](http://www.vagrantup.c
 
 Then, do: 
 ```bash
-$ git clone
+$ git clone https://github.com/baswenneker/vagrant-pimatic-dev.git
 $ cd vagrant-pimatic-dev
 $ vagrant up
 ```
 
-This will download a virtual machine image and start a bootstrap process that installs node.js and pimatic-dev.
+This will download a virtual machine image and start a bootstrap process that installs node.js and pimatic-dev. Running `vagrant up` for the first time will take a while so go grab a coffee.
 
 ## Post installation
 You should add these options to the settings section of your `config.json` to get debug outputs:
@@ -35,20 +35,19 @@ To launch pimatic, execute the folowing (from the `vagrant-pimatic-dev`):
 
 ```bash
 $ cd <vagrant-pimatic-dev-folder>
+
+# If not done already, do a vagrant up
+$ vagrant up 
+
+# The following command sshs into the vagrant virtual machine.
 $ vagrant ssh
-...
+
+# Go to the pimatic-dev folder and start the pimatic daemon:
 $ cd /vagrant/pimatic-dev
-$ sudo node_modules/pimatic/pimatic.js
+$ sudo node_modules/pimatic/pimatic.js start
 ```
 
 Then point your browser on the host machine to [http://localhost:4567](http://localhost:4567) for the web-interface. Please keep in mind that the `Vagrantfile` contains a rule that maps port 80 from the guest machine to port 4567 on the host machine.
-
-To _ssh_ into the vagrant virtual machine, do:
-
-```bash
-$ cd <vagrant-pimatic-dev-folder>
-$ vagrant ssh
-```
 
 For more information on pimatic development, read the [pimatic development](http://pimatic.org/guide/development) guide.
 
