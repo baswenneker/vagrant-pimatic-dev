@@ -1,4 +1,5 @@
 # vagrant-pimatic-dev
+`vagrant-pimatic-dev` creates and configures a portable, reproducible and lightweight virtual development environment for pimatic. It enables cross-platform development of pimatic and pimatic plugins.
 
 ## Installation
 First, make sure you have the latest version of [Vagrant](http://www.vagrantup.com/downloads.html) and [VirtualBox](https://www.virtualbox.org/wiki/Downloads) installed.

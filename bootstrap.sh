@@ -12,5 +12,6 @@ cd /vagrant/
 mkdir pimatic-dev
 npm install pimatic --prefix pimatic-dev
 
+## Copy the default config to the pimatic-dev folder
 cd pimatic-dev
 cp ./node_modules/pimatic/config_default.json ./config.json
