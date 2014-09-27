@@ -50,6 +50,15 @@ $ sudo node_modules/pimatic/pimatic.js start
 
 Then point your browser on the host machine to [http://localhost:4567](http://localhost:4567) for the web-interface. Please keep in mind that the `Vagrantfile` contains a rule that maps port 80 from the guest machine to port 4567 on the host machine.
 
+## Tips
+Most of the times I find myself opening a second terminal window to keep track of the `pimatic-daemon.log` file:
+
+```bash
+$ tail -f /vagrant/pimatic-dev/pimatic-daemon.log
+```
+
+`tail -f` keeps refreshing and restarting pimatic has no effect on the tail.
+
 For more information on pimatic development, read the [pimatic development](http://pimatic.org/guide/development) guide.
 
 
