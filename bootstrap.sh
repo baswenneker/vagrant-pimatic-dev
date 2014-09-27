@@ -4,7 +4,7 @@
 sudo apt-get update
 sudo apt-get install -y curl
 curl -sL https://deb.nodesource.com/setup | sudo bash -
-sudo apt-get install -y nodejs build-essential
+sudo apt-get install -y nodejs build-essential git
 
 ## Install pimatic development
 sudo chmod 777 /vagrant/

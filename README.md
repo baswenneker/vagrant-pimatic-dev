@@ -44,7 +44,7 @@ $ vagrant up
 $ vagrant ssh
 
 # Go to the pimatic-dev folder and start the pimatic daemon:
-$ cd /vagrant/pimatic-dev
+$ cd /vagrant/vagrant-pimatic-dev
 $ sudo node_modules/pimatic/pimatic.js start
 ```
 
@@ -54,10 +54,23 @@ Then point your browser on the host machine to [http://localhost:4567](http://lo
 Most of the times I find myself opening a second terminal window to keep track of the `pimatic-daemon.log` file:
 
 ```bash
-$ tail -f /vagrant/pimatic-dev/pimatic-daemon.log
+$ tail -f /vagrant/vagrant-pimatic-dev/pimatic-daemon.log
 ```
 
 `tail -f` keeps refreshing and restarting pimatic has no effect on the tail.
+
+### Develop you plugin against Pimatic GitHub code
+The `bootstrap.sh` installs pimatic from the NPM repository. This means some files that are available in the pimatic GitHub repository are not available for you. For example the Gruntfile for testing is misses in the pimatic NPM module.
+
+```bash
+$ cd /vagrant/vagrant-pimatic-dev/node_modules
+$ rm -rf pimatic/
+$ git clone https://github.com/pimatic/pimatic.git
+
+# Don't forget to install the dependencies
+$ cd /node_modules/pimatic
+$ npm install
+```
 
 For more information on pimatic development, read the [pimatic development](http://pimatic.org/guide/development) guide.
 
