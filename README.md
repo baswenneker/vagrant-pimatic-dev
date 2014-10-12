@@ -30,7 +30,7 @@ Additionally, change the password or replace the username and password by `"enab
 ```
 
 ## Usage
-Note that Vagrant syncs the `vagrant-pimatic-dev` (on the host machine) with `/vagrant` (on the guest machine) so you can use your IDE from the host machine to develop code.
+Note that Vagrant syncs the `vagrant-pimatic-dev` (on the host machine) with `/vagrant` (on the guest machine) so you can use your IDE from the host machine for development.
 
 To launch pimatic, execute the folowing (from the `vagrant-pimatic-dev`):
 
@@ -59,8 +59,8 @@ $ tail -f /vagrant/vagrant-pimatic-dev/pimatic-daemon.log
 
 `tail -f` keeps refreshing and restarting pimatic has no effect on the tail.
 
-### Develop your plugin against Pimatic GitHub code
-The `bootstrap.sh` installs pimatic from the NPM repository. This means some files that are available in the pimatic GitHub repository are not available for you. For example the Gruntfile for testing is misses in the pimatic NPM module.
+### Develop your plugin against Pimatic GitHub repo
+The `bootstrap.sh` installs pimatic from the NPM repository. This means some files that are available in the pimatic GitHub repository are not available (for example the Gruntfile is missing in the pimatic NPM module). Here's how to clone pimatic from GitHub:
 
 ```bash
 $ cd /vagrant/vagrant-pimatic-dev/node_modules
@@ -73,7 +73,3 @@ $ npm install
 ```
 
 For more information on pimatic development, read the [pimatic development](http://pimatic.org/guide/development) guide.
-
-
-
-
