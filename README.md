@@ -59,7 +59,7 @@ $ tail -f /vagrant/vagrant-pimatic-dev/pimatic-daemon.log
 
 `tail -f` keeps refreshing and restarting pimatic has no effect on the tail.
 
-### Develop you plugin against Pimatic GitHub code
+### Develop your plugin against Pimatic GitHub code
 The `bootstrap.sh` installs pimatic from the NPM repository. This means some files that are available in the pimatic GitHub repository are not available for you. For example the Gruntfile for testing is misses in the pimatic NPM module.
 
 ```bash
