@@ -44,7 +44,7 @@ $ vagrant up
 $ vagrant ssh
 
 # Go to the pimatic-dev folder and start the pimatic daemon:
-$ cd /vagrant/vagrant-pimatic-dev
+$ cd /vagrant/pimatic-dev
 $ sudo node_modules/pimatic/pimatic.js start
 ```
 
